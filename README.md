@@ -1,5 +1,5 @@
 # cesusc-devops2
-UNICESUSC
-Disciplina Ferramentas de Implantação Continua DevOps
-Projeto Automação de Pipelines CI/CD
+UNICESUSC <BR>
+Disciplina Ferramentas de Implantação Continua DevOps <BR>
+Projeto Automação de Pipelines CI/CD <BR>
 
