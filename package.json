@@ -1,0 +1,18 @@
+{
+  "name": "cesusc-devops2",
+  "version": "1.0.0",
+  "description": "UNICESUSC <BR> Disciplina Ferramentas de Implantação Continua DevOps <BR> Projeto Automação de Pipelines CI/CD <BR>",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
