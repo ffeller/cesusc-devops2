@@ -23,4 +23,4 @@ jobs:
         run: |
           docker build . --file Dockerfile --tag ffeller/cesusc-devops2:${{ github.sha }}
           docker tag ffeller/cesusc-devops2:${{ github.sha }} ffeller/cesusc-devops2:latest
-          docker push -a ffeller/cesusc-devops2:${{ github.sha }}
+          docker push -a ffeller/cesusc-devops2
