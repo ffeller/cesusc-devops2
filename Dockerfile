@@ -5,7 +5,7 @@ RUN mkdir -p /opt/cesusc-devops2
 WORKDIR /opt/cesusc-devops2
 
 # Copia os arquivos necessários
-COPY src .
+COPY src/ src/
 COPY LICENSE .
 COPY package.json .
 RUN npm install
