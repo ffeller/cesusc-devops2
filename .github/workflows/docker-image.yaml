@@ -24,3 +24,20 @@ jobs:
           docker build . --file Dockerfile --tag ffeller/cesusc-devops2:${{ github.sha }}
           docker tag ffeller/cesusc-devops2:${{ github.sha }} ffeller/cesusc-devops2:latest
           docker push -a ffeller/cesusc-devops2
+
+  deploy:
+    needs: build
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.0 
+        with:
+          host: 56.124.32.181
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/cesusc-devops2
+            pm2 stop src/app.js
+            docker compose down
+            docker compose up -d
