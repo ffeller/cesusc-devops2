@@ -40,4 +40,5 @@ jobs:
             cd /opt/cesusc-devops2
             pm2 stop src/app.js
             docker compose down
+            docker rmi ffeller/cesusc-devops2:latest
             docker compose up -d
